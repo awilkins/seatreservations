@@ -21,8 +21,7 @@ public class Solution {
 
     @VisibleForTesting
     static void fillSeat(boolean[] row, char seat) {
-        int offset = seat - 'A';
-        row[offset] = true;
+        row[seatColumn(seat)] = true;
     }
 
     @VisibleForTesting
