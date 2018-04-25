@@ -17,4 +17,11 @@ public class SolutionTest {
         boolean[] row = Solution.makeRow();
         assertThat(row.length, is(10));
     }
+
+    @Test
+    public void fillFirstSeat() {
+        boolean[] row = Solution.makeRow();
+        Solution.fillSeat(row, 'A');
+        assertThat(row[0], is(true));
+    }
 }
