@@ -24,4 +24,9 @@ public class SolutionTest {
         Solution.fillSeat(row, 'A');
         assertThat(row[0], is(true));
     }
+
+    @Test
+    public void getRowFromSeatName() {
+        assertThat(Solution.getRow("3A"), is(3));
+    }
 }
