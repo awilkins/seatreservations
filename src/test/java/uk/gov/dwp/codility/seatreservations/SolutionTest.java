@@ -52,13 +52,13 @@ public class SolutionTest {
     }
 
     @Test
-    public void getRowFromSeatName() {
-        assertThat(Solution.getRow("3A"), is(3));
+    public void getRowIndexFromSeatName() {
+        assertThat(Solution.getRow("3A"), is(2));
     }
 
     @Test
     public void getRowAboveTenFromSeatName() {
-        assertThat(Solution.getRow("32A"), is(32));
+        assertThat(Solution.getRow("32A"), is(31));
     }
 
     @Test
