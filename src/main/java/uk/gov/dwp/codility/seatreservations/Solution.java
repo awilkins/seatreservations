@@ -2,6 +2,8 @@ package uk.gov.dwp.codility.seatreservations;
 
 import com.google.common.annotations.VisibleForTesting;
 
+import java.util.StringTokenizer;
+
 public class Solution {
 
     @VisibleForTesting
@@ -74,6 +76,24 @@ public class Solution {
     }
 
     public int solution(int N, String S) {
-        return 0;
+
+        boolean[][] plane = new boolean[N][];
+        for(int ii = 0 ; ii < N ; ii++) {
+            plane[ii] = makeRow();
+        }
+
+        StringTokenizer reservations = new StringTokenizer(S);
+        while(reservations.hasMoreTokens()) {
+            fillSeat(plane, reservations.nextToken());
+        }
+
+        int familyCount = 0;
+        for(int rowIndex = 0 ; rowIndex < N ; rowIndex++ ) {
+            boolean[] row = plane[rowIndex];
+            while(seatFamily(row)) {
+                familyCount ++;
+            }
+        }
+        return familyCount;
     }
 }
