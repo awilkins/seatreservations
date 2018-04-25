@@ -41,6 +41,7 @@ public class InputOnlyTest {
         while(reader.ready()) {
 
             String line = reader.readLine();
+            if(line.length() == 0) return;
             Params p = new Params(line);
 
             Solution s = new Solution();
