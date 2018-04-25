@@ -21,6 +21,12 @@ public class Solution {
         return Integer.parseInt(rowPart);
     }
 
+    @VisibleForTesting
+    static char getSeat(String seatName) {
+        char seatPart = seatName.charAt(seatName.length() - 1);
+        return seatPart;
+    }
+
     public int solution(int N, String S) {
         return 0;
     }
