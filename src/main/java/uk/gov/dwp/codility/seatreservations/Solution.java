@@ -15,6 +15,12 @@ public class Solution {
         row[offset] = true;
     }
 
+    @VisibleForTesting
+    static int getRow(String seatNumber) {
+        String rowPart = seatNumber.substring(0, seatNumber.length() - 1);
+        return Integer.parseInt(rowPart);
+    }
+
     public int solution(int N, String S) {
         return 0;
     }
