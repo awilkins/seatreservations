@@ -16,8 +16,8 @@ public class Solution {
     }
 
     @VisibleForTesting
-    static int getRow(String seatNumber) {
-        String rowPart = seatNumber.substring(0, seatNumber.length() - 1);
+    static int getRow(String seatName) {
+        String rowPart = seatName.substring(0, seatName.length() - 1);
         return Integer.parseInt(rowPart);
     }
 
