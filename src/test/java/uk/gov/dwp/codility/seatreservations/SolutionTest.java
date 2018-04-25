@@ -34,4 +34,9 @@ public class SolutionTest {
     public void getRowAboveTenFromSeatName() {
         assertThat(Solution.getRow("32A"), is(32));
     }
+
+    @Test
+    public void getSeatFromSeatName() {
+        assertThat(Solution.getSeat("3A"), is('A'));
+    }
 }
