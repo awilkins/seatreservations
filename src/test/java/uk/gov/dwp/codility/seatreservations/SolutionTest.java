@@ -45,11 +45,6 @@ public class SolutionTest {
     }
 
     @Test
-    public void invalidSeatColumnIndex() {
-
-    }
-
-    @Test
     public void fillSeatByIndex() {
         boolean[] row = Solution.makeRow();
         Solution.fillSeat(row, 2);
