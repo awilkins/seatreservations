@@ -19,6 +19,13 @@ public class Solution {
     }
 
 
+    static void fillSeat(boolean[][] plane, String seatName) {
+        int rowIndex = getRow(seatName);
+        boolean[] row = plane[rowIndex];
+        char seatColumn = getSeat(seatName);
+        fillSeat(row, seatColumn);
+    }
+
     @VisibleForTesting
     static void fillSeat(boolean[] row, char seat) {
         row[seatColumn(seat)] = true;
