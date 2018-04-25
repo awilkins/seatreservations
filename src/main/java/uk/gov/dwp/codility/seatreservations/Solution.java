@@ -32,7 +32,7 @@ public class Solution {
     @VisibleForTesting
     static int getRow(String seatName) {
         String rowPart = seatName.substring(0, seatName.length() - 1);
-        return Integer.parseInt(rowPart);
+        return Integer.parseInt(rowPart) - 1;
     }
 
     @VisibleForTesting
