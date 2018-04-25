@@ -12,6 +12,9 @@ import java.io.InputStreamReader;
  * This class is intended to replicate the Codility "input only" tests that
  * the web app presents - the user can populate a resource file to pass inputs and expected
  * outputs to the function
+ *
+ * Edit the inputs.txt resource file to add extra test/result sets
+ *
  */
 public class InputOnlyTest {
 
